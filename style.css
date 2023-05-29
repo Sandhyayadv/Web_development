@@ -1,0 +1,219 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f2f5;
+    position: relative;
+    height: 115vh;
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+   position: relative;
+   margin-top: px;
+  /* float:right; */
+  margin-left: 700px;
+  text-align: right;
+/* margin-top: ; */
+}
+#recent-logins{
+    flex-direction: column;
+    display: flex;
+    position: relative;
+
+    left: 13vw;
+    right: 13vh;
+    font-size: 23;
+}
+#facebook{
+    height: 110px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-left: -500px;
+     margin-top: 190px ;
+    
+
+     left:22vw;
+    right: 23vh;
+    position: relative;
+    /* margin: 200px; */
+
+}
+
+#login{
+    position: relative;
+    background-color: #ffffff;
+    height: 330px;
+    width: 420px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    top:10vh;
+    justify-content: center;
+    padding: 10px 10px 20px 10px;
+    align-items: center;
+     margin-top: -220px;
+    /* box-shadow:0 5px 5px 3px gainsboro ; */
+
+}
+
+#login>a{
+   
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: -1px;
+    color: #1877f2;
+}
+#login>a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+hr{
+    width: 95%;
+    height: 0.1%;
+    color: rgb(189, 185, 185);
+    /* border: none; */
+}
+
+
+ 
+#email{
+    height:50px ;
+    width: 95%;
+    font-size:19px ;
+    /* text-align: center; */
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 221, 221);
+}
+#email:hover{
+    border:1px solid #7993f1;
+}
+#password{
+    height:50px ;
+    width: 95%;
+    font-size:19px ;
+    /* text-align: center; */
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 221, 221);
+    box-shadow: 2px rgb(148, 158, 158);
+    
+}
+#password:hover{
+    border:1px solid #869ef3;
+}
+
+#login-button{
+    background-color: #1877f2;
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+    height: 500px;
+    width: 95%;
+    font-weight: bold;
+margin: 10px;
+border-radius: 5px;
+}
+#login-button:hover{
+background-color: #1668db;
+cursor: pointer;
+}
+#create-new-account{
+    background-color: rgb(20, 210, 20);
+    font-size: 18px;
+    border: none;
+    width: 50%;
+    height: 500px;
+font-weight: bold;
+color: #ffffff;
+margin: 10px;
+border-radius:5px ;
+}
+#create-new-account:hover{
+    background-color: green;
+
+}
+#foot{
+    /* bottom: 333vh; */
+    left:95vw;
+    right: 100vh;
+    margin-left: 33px;
+    margin-right: 22px;
+    margin-top: 350px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    padding-left: 97px;
+   
+
+}
+.footer{
+    background-color: #ffffff;
+    margin-left: px;
+    height: 210px;
+    /* padding:5px; */
+    font-size: 13px;
+    margin-top:-15px;
+/* padding-bottom: 20px; */
+/* margin: 10px; */
+
+}
+#line{
+  font-size: 13px;
+   margin-left: 755px;
+   margin-top: 90px;
+}
+@media screen and (max-width:1114px){
+    #recent-logins{
+left:17px;
+margin-right: 22vw;
+}
+#login{
+right: 30px;
+}
+}
+ @media screen and(max-width:700px) {
+    body{
+        height: 150vh;
+    }
+    .container{
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+    }
+    #recent-logings{
+        margin-right: 0;
+        align-items: center;
+        left:0;
+        top: 20px;
+    }
+    #login{
+        text-align: center;
+left: 0;
+margin-right: 0;
+margin-top: -30px;
+margin-top: 80px;
+    }
+    footer{
+        position: absolute;
+        padding: 20px;
+        width: 100vw;
+    }
+ }  
+ 
+
+
