@@ -1,0 +1,80 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+input{
+border: 2px solid rgb(158, 3, 55);
+height: 30px;
+width:1000x ;
+border-radius: 5px;
+padding: 5px;
+margin: 10px;
+margin-left:0px ;
+}
+
+body{
+      background-color: rgb(234, 248, 153);
+      display: flex;
+      justify-content: center;
+      margin: 30px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="input">
+      <h1>To-Do-List</h1>   
+<input id="InputBox" type="text" placeholder=" Enter your To-Do ">
+    </div>
+    <div class="listitems">
+    <ul id="listItems">
+    </ul>
+    </div>
+  </div>
+
+<script>
+  const InputBox=document.getElementById("InputBox")
+  const listItems=document.getElementById("listItems")
+ 
+  InputBox.addEventListener("keydown",function(e){
+    if(e.key=="Enter"){
+    
+      ToDo()
+    }
+  })
+
+  function ToDo(){
+    let a=document.createElement('a')
+    a.innerHTML=InputBox.value;
+  
+     a.style.display="block"
+
+    a.addEventListener("mouseover",function(){
+      a.style.textDecoration="line-through"
+    })
+
+    a.addEventListener("click",function(){
+       a.innerHTML=""
+    })
+
+    listItems.appendChild(a)
+    InputBox.value=""
+
+  }
+
+</script>
+</body>
+</html>
+

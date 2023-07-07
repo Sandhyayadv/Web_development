@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(238, 248, 132);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        /* width: 200px; */
+      }
+      .Box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 700px;
+      }
+      #btn {
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        margin: 20px;
+        font-size: large;
+        border: 2px solid rgb(95, 2, 29);
+        background-color: rgb(4, 176, 33);
+      }
+      #btn:hover {
+        background-color: rgb(225, 39, 39);
+      }
+      .Box h1 {
+        font-size: 60px;
+        color: crimson;
+        margin: 20px;
+      }
+      .Box p {
+        font-size: 30px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Box">
+        <h1>Quotes Generator</h1>
+        <p id="para">
+          All children are artists. The problem is how to remain an artist once
+          he grows up
+        </p>
+        <p id="auther">Pablo Picasso</p>
+        <button id="btn">Generate Quotes</button>
+      </div>
+    </div>
+    <script>
+      const auther = document.getElementById("auther");
+      const para = document.getElementById("para");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", function () {
+        GenerateQuotes();
+      });
+
+      GenerateQuotes = () => {
+        // fetch('https://api.quotable.io/random')         // first Api
+        fetch("https://type.fit/api/quotes") // Second Api
+          .then((response) => {
+            return response.json();
+          })
+          .then((result) => {
+            console.log(result);
+            getdata(result);
+          });
+      };
+      getdata = (result) => {
+        let i = Math.floor(Math.random() * result.length);
+        para.innerText = result[i].text;
+        auther.innerText = result[i].author;
+      };
+
+      //         GenerateQuotes=()=>{
+      //          fetch('https://api.quotable.io/random')             // first Api
+      //           // fetch("https://type.fit/api/quotes")              // Second Api
+      //              .then(response=>{
+      //     return response.json();
+      //   })
+      //   .then(result=> {
+      //     console.log(result)
+      //     para.innerText=result.content
+      //     auther.innerText=result.author
+      //   });
+      // }
+    </script>
+  </body>
+</html>

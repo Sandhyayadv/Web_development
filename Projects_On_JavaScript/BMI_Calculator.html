@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculate Body Mass Index</title>
+
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body{
+        display: flex;
+        flex-direction: column;
+        background-color: pink;
+        margin: 100px;
+      }
+      input{
+        width: 300px;
+        height: 30px;
+        border: 2px solid black;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      button{
+        width: 300px;
+       height: 30px;
+      font-size: large;
+      border: 2px solid;
+      background-color: rgb(174, 4, 92);
+      margin: 10px;
+      margin-left: 5px;
+      border-radius: 5px;
+      }
+      button:hover{
+        background-color: rgb(160, 5, 5);
+      }
+    </style>
+   
+  </head>
+ 
+  <body>
+    <h1>Body Mass Index Calculator</h1>
+
+    <input type="text" id="mass" placeholder="Mass in Kilogram" />
+    <input type="text" id="height" placeholder="Height in meters" />
+    <button>Calculate BMI</button>
+    <div id="result">Result : </div>
+
+
+    <script>
+
+      const mass = document.querySelector('#mass')
+      const height = document.querySelector('#height')
+      const button = document.querySelector('button')
+      const result=document.getElementById('result')
+      let bmi
+      button.addEventListener('click', () => {
+        bmi = (mass.value / height.value ** 2).toFixed(2)
+
+        // result.textContent=`your bmi is ${bmi.toFixed(2)}`
+      //  document.write(result)
+      if(bmi<18.5){
+        result.textContent=`your bmi is ${bmi} . You are in Underweight range`
+      }
+      else if(18.5<bmi && bmi<25){
+        result.textContent=`your bmi is ${bmi} . You are in healthy weight range`
+      }
+      else if(25<bmi && bmi<30){
+        result.textContent=`your bmi is ${bmi} . You are in Over weight range`
+      }
+      else {
+        result.textContent=`your bmi is ${bmi} . You are in obesity range`
+      }
+      mass.value=""
+      height.value=""
+      })
+
+    </script>
+    
+  </body>
+</html> 
+

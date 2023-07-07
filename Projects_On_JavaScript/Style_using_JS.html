@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+
+    <style>
+         li{
+            list-style: none;
+            margin: 3px;
+        } 
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <ul class="list" >
+            <li id="li-1">30DaysOfPython Challenge Done</li>
+            <li id="li-2">30DaysOfJavaScript Challenge Ongoing</li>
+            <li id="li-3">30DaysOfReact Challenge Coming</li>
+            <li id="li-4">30DaysOfFullStack Challenge Coming</li>
+            <li id="li-5">30DaysOfDataAnalysis Challenge Coming</li>
+            <li id="li-6">30DaysOfReactNative Challenge Coming</li>
+            <li id="li-7">30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+
+
+<script>
+
+const titles = document.querySelectorAll('h1')
+ titles.forEach((title, i) => {
+         title.style.fontSize = '54px'
+        
+    setInterval(function() {
+    // Generate random RGB values
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+  
+    // Create the CSS color string
+    var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  
+    // Apply the color to the background
+    title.style.color = color;
+  }, 1000);
+    
+     title.style.backgroundColor = 'pink'
+ })
+
+ const title2=document.querySelectorAll('h2')
+ title2.forEach((title1,i)=>{
+    
+    setInterval(function() {
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+  
+    var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  
+    title1.style.backgroundColor = color;
+  }, 1000);
+    
+     title1.style.color="crimson"
+   
+ })
+
+    const lil1= document.querySelector('#li-1')
+    
+    lil1.style.backgroundColor = 'green'
+
+    const lil2= document.querySelector('#li-2')
+    
+    lil2.style.backgroundColor = 'yellow'
+
+    const lil3= document.querySelector('#li-3')
+   
+    lil3.style.backgroundColor = 'orange'
+
+    const lil= document.querySelector('#li-4')
+    
+    lil.style.backgroundColor = 'orange'
+
+    const lil5= document.querySelector('#li-5')
+    
+    lil5.style.backgroundColor = 'orange'
+
+    const li6= document.querySelector('#li-6')
+    
+    li6.style.backgroundColor = 'orange'
+
+    const lil7= document.querySelector('#li-7')
+    
+    lil7.style.backgroundColor = 'orange'
+    lil7.addEventListener("mouseover", function abc(){
+  lil7.style.backgroundColor = 'yellow'
+      lil7.style.color = 'crimson'
+});
+
+</script>
+
+</body>
+</html>

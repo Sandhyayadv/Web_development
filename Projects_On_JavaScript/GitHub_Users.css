@@ -1,0 +1,26 @@
+.title{
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.cards{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 1em 0;
+}
+.cards img{
+    width: 30%;
+    object-fit: contain;
+
+}
+.cards h1{
+    font-size:1.4rem ;
+    width: 40%;
+    padding-right: .5em;
+}
